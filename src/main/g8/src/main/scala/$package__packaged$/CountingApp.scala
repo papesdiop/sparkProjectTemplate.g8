@@ -7,7 +7,7 @@ import org.apache.spark.{SparkConf, SparkContext}
   * sbt "run inputFile.txt outputFile.txt"
   *  (+ select CountingLocalApp when prompted)
   */
-object CountingLocalApp extends App{
+object $mainClass$ extends App{
   val (inputFile, outputFile) = (args(0), args(1))
   val conf = new SparkConf()
     .setMaster("local")
@@ -19,7 +19,7 @@ object CountingLocalApp extends App{
 /**
   * Use this when submitting the app to a cluster with spark-submit
   * */
-object CountingApp extends App{
+object $mainClass$App extends App{
   val (inputFile, outputFile) = (args(0), args(1))
 
   // spark-submit command should supply all necessary config elements
